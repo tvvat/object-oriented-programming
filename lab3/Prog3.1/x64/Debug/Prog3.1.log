@@ -1,0 +1,9 @@
+﻿  Diol.cpp
+C:\Users\hlizu\source\repos\Prog3.1\Prog3.1\Diol.h(80,7): error C2280: "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator =(const std::basic_istream<char,std::char_traits<char>> &)": предпринята попытка ссылки на удаленную функцию
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(70): message : см. объявление "std::basic_istream<char,std::char_traits<char>>::operator ="
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(70,39): message : "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator =(const std::basic_istream<char,std::char_traits<char>> &)": функция явно удалена.
+  Prog3.1.cpp
+C:\Users\hlizu\source\repos\Prog3.1\Prog3.1\Diol.h(80,7): error C2280: "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator =(const std::basic_istream<char,std::char_traits<char>> &)": предпринята попытка ссылки на удаленную функцию
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(70): message : см. объявление "std::basic_istream<char,std::char_traits<char>>::operator ="
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\istream(70,39): message : "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator =(const std::basic_istream<char,std::char_traits<char>> &)": функция явно удалена.
+  Создание кода...

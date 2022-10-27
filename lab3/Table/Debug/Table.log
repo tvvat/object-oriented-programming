@@ -1,0 +1,3 @@
+﻿  Table.cpp
+C:\Users\hlizu\source\repos\Table\Table\Table.cpp(317,9): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Table.vcxproj -> C:\Users\hlizu\source\repos\Table\Debug\Table.lib

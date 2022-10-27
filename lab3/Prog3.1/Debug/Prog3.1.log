@@ -1,0 +1,5 @@
+﻿  Diol.cpp
+  Prog3.1.cpp
+  Создание кода...
+C:\Users\hlizu\source\repos\Prog3.1\Prog3.1\Diol.cpp(349): warning C4715: Prog3::Option::case_invert: значение возвращается не при всех путях выполнения
+  Prog3.1.vcxproj -> C:\Users\hlizu\source\repos\Table\Debug\Prog3.1.exe
