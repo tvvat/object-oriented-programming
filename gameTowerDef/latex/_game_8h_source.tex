@@ -1,0 +1,113 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+\label{_game_8h_source}\index{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Game.h@{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Build.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define Num 3}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define counttower 10}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define min5 300}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define tensecond 10}}
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }cry \{}
+\DoxyCodeLine{15     \textcolor{keyword}{struct }\mbox{\hyperlink{structcry_1_1_option}{Option}} \{}
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} money;}
+\DoxyCodeLine{17         \textcolor{keywordtype}{int} time;}
+\DoxyCodeLine{18     \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{enum} Typeland \{}
+\DoxyCodeLine{21         plain = 0,}
+\DoxyCodeLine{22         reservoir,}
+\DoxyCodeLine{23         mountain,}
+\DoxyCodeLine{24         walltype,}
+\DoxyCodeLine{25         towertypeempty,}
+\DoxyCodeLine{26         towertype,}
+\DoxyCodeLine{27         palacetype,}
+\DoxyCodeLine{28         lairtype,}
+\DoxyCodeLine{29         enemytype,}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{33     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1landscape}{landscape}} \{}
+\DoxyCodeLine{34     \textcolor{keyword}{private}:}
+\DoxyCodeLine{35         Typeland type;}
+\DoxyCodeLine{36         \textcolor{keywordtype}{int} lenght;}
+\DoxyCodeLine{37         std::pair<int, int> coordinat;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{public}:}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} getside() \{ \textcolor{keywordflow}{return} lenght; \};}
+\DoxyCodeLine{43         Typeland getType() \{ \textcolor{keywordflow}{return} type; \};}
+\DoxyCodeLine{44         \textcolor{keywordtype}{int} setType(Typeland );\textcolor{comment}{/*}}
+\DoxyCodeLine{45 \textcolor{comment}{        int setCoordinate(std::pair <int,int>);*/}}
+\DoxyCodeLine{46         std::pair <int, int> getcoordinat() \{ \textcolor{keywordflow}{return} coordinat; \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}} \{}
+\DoxyCodeLine{53     \textcolor{keyword}{private}:}
+\DoxyCodeLine{54         \textcolor{keywordtype}{int} lenght;}
+\DoxyCodeLine{55         \textcolor{keywordtype}{int} width;}
+\DoxyCodeLine{56         \mbox{\hyperlink{classcry_1_1_palace}{Palace}} palace;}
+\DoxyCodeLine{57         \mbox{\hyperlink{classcry_1_1_lair}{Lair}} lair;}
+\DoxyCodeLine{58         \textcolor{comment}{/*int time;*/}}
+\DoxyCodeLine{59         std::pair<int, int> laircoordin;}
+\DoxyCodeLine{60         std::map<std::pair<int, int>, typeenemy > typewhere;}
+\DoxyCodeLine{61         }
+\DoxyCodeLine{62     \textcolor{keyword}{public}:}
+\DoxyCodeLine{63         std::map <std::pair<int, int>, std::shared\_ptr<Enemy> >  enemywhere;}
+\DoxyCodeLine{64         std::vector <std::vector<landscape>> quad;}
+\DoxyCodeLine{65         std::pair <int, int> palacecoordin;}
+\DoxyCodeLine{66         std::vector < std::shared\_ptr<Enemy> > enemypalace;}
+\DoxyCodeLine{67         std::map<std::pair<int,int>,std::shared\_ptr<Tower> > towerwhere;}
+\DoxyCodeLine{68     \textcolor{keyword}{public}:}
+\DoxyCodeLine{69         \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}();}
+\DoxyCodeLine{70         \textcolor{keywordtype}{int} calculateTrajectory();}
+\DoxyCodeLine{71         \textcolor{keywordtype}{int} getLen() \{ \textcolor{keywordflow}{return} lenght; \};}
+\DoxyCodeLine{72         \textcolor{keywordtype}{int} getWid() \{ \textcolor{keywordflow}{return} width; \};}
+\DoxyCodeLine{73         \mbox{\hyperlink{classcry_1_1landscape}{landscape}} getquad(std::pair<int, int> t) \{ \textcolor{keywordflow}{return} quad[t.first][t.second]; \};}
+\DoxyCodeLine{74         std::pair<int, int> getpairpalace() \{ \textcolor{keywordflow}{return}  palacecoordin; \};}
+\DoxyCodeLine{75         \textcolor{keywordtype}{int} setpairpalace(std::pair<int, int> );}
+\DoxyCodeLine{76         \textcolor{keywordtype}{void} setlenght(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{77         \textcolor{keywordtype}{void} setwidth(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{78         \textcolor{keywordtype}{int} creatfiald(std::pair<int, int>, Typeland);}
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} setpairenemy(std::pair<int, int>,typeenemy); }
+\DoxyCodeLine{80         \textcolor{keywordtype}{int} setpairlair(std::pair<int, int> a);}
+\DoxyCodeLine{81         \textcolor{keywordtype}{void} setCoordin(std::pair<int, int>, std::pair<int, int>, std::vector<std::pair<int, int>> twr);}
+\DoxyCodeLine{82         \textcolor{keywordtype}{int} show();}
+\DoxyCodeLine{83     \};}
+\DoxyCodeLine{84     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_game}{Game}} \{}
+\DoxyCodeLine{85     \textcolor{keyword}{private}:}
+\DoxyCodeLine{86         \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}} card;}
+\DoxyCodeLine{87         std::string menu[Num] = \{ \textcolor{stringliteral}{"{}Hello!let's go.Enemy mustn't destroy u palace\(\backslash\)n"{}},\textcolor{stringliteral}{"{}game over\(\backslash\)n"{}},\textcolor{stringliteral}{"{}fly enemy just keep way to palace"{}} \};}
+\DoxyCodeLine{88         time\_t clock;}
+\DoxyCodeLine{89         time\_t clocktolvl;}
+\DoxyCodeLine{90         std::vector<std::pair <int, int>> towercoordin;}
+\DoxyCodeLine{91         std::pair <int, int> palacecordin;}
+\DoxyCodeLine{92         std::pair <int, int> laircoordin;\textcolor{comment}{//что бы правильно сформировать уровень вроде как башни находятся всегда на одних координатах}}
+\DoxyCodeLine{93         \mbox{\hyperlink{classcry_1_1_palace}{Palace}} palace;}
+\DoxyCodeLine{94         \mbox{\hyperlink{classcry_1_1_lair}{Lair}} lair;}
+\DoxyCodeLine{95         \mbox{\hyperlink{classcry_1_1_wall}{Wall}} wall;}
+\DoxyCodeLine{96         \mbox{\hyperlink{structcry_1_1_option}{Option}} option;}
+\DoxyCodeLine{97     \textcolor{keyword}{public}:}
+\DoxyCodeLine{98         \mbox{\hyperlink{classcry_1_1_game}{Game}}();}
+\DoxyCodeLine{99         \textcolor{keywordtype}{int} start();}
+\DoxyCodeLine{100         \textcolor{keywordtype}{int} putenemy(\mbox{\hyperlink{structcry_1_1allenemy}{allenemy}}\&);}
+\DoxyCodeLine{101         \textcolor{keywordtype}{int} creatbuild(std::pair<int, int> , \textcolor{keywordtype}{int} );}
+\DoxyCodeLine{102         time\_t gettime();}
+\DoxyCodeLine{103         time\_t countttime();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \}}
+
+\end{DoxyCode}

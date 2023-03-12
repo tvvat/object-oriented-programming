@@ -1,0 +1,219 @@
+\hypertarget{classcry_1_1_enemy}{}\doxysection{cry\+::Enemy Class Reference}
+\label{classcry_1_1_enemy}\index{cry::Enemy@{cry::Enemy}}
+Inheritance diagram for cry\+::Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcry_1_1_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcry_1_1_enemy_a71f1c9e699b53b96e8c304ae0138469a}{Enemy}} (std\+::string title=\char`\"{}light\char`\"{}, int dam=heatlight, int HP=HPlight, int healka=heallight, int speadhealka=secper\+HP)
+\item 
+\mbox{\Hypertarget{classcry_1_1_enemy_af11f3806f6744b3a4f853fd3a1b4a8c4}\label{classcry_1_1_enemy_af11f3806f6744b3a4f853fd3a1b4a8c4}} 
+int {\bfseries get\+Max\+HP} ()
+\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_a136d906af099bd88f0c77f13f1b9e493}{get\+HP}} ()
+\begin{DoxyCompactList}\small\item\em get now hphero \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_a868a8a1d164a5a350ba06cff606cbb8f}{get\+Damage}} ()
+\begin{DoxyCompactList}\small\item\em get damege hero \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_abe5ce2f2c8a819af4b59d0706dbf0efa}{get\+SpeedW}} ()
+\begin{DoxyCompactList}\small\item\em get speed walk \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_afdbdba924ae81d1dca384d5178d4a81c}{get\+SpeedH}} ()
+\begin{DoxyCompactList}\small\item\em get speed heal \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_af02512cb4065aad9a91ed72d061fa2a9}{get\+Heal}} ()
+\begin{DoxyCompactList}\small\item\em get heal \mbox{[}ser per hp\mbox{]} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcry_1_1_enemy_ae14279708c41a5f409ef7d5aea35b826}{set\+Speedh}} (int)
+\begin{DoxyCompactList}\small\item\em change speed heal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcry_1_1_enemy_a3920308944f404c7cb55ba73f220cf9b}{set\+SpeedW}} (int)
+\begin{DoxyCompactList}\small\item\em change speed heal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcry_1_1_enemy_a15f4aefd3a4af3246f9414ff437b63e6}{setdamege}} (int)
+\begin{DoxyCompactList}\small\item\em change damage \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_a3450fe20b3c861049fce57e2b9931656}{set\+HP}} (int)
+\begin{DoxyCompactList}\small\item\em new noww hp \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_a38684fe0e1686b16567c32f88a0f1476}{fight}} (int)
+\begin{DoxyCompactList}\small\item\em demag to emeny \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcry_1_1_enemy_aa27c2044144030294c912c142809e213}{plushp}} (time\+\_\+t)
+\begin{DoxyCompactList}\small\item\em heal \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcry_1_1_enemy_a0b221bff0a0db5315e4f6cf0c239f1dc}{set\+Max}} (int)
+\begin{DoxyCompactList}\small\item\em set max \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classcry_1_1_enemy_acf1119a9114a2218500ec1246813088f}{moving}} (const \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\+\_\+field}} \&, std\+::pair$<$ int, int $>$, int)=0
+\begin{DoxyCompactList}\small\item\em for find min step \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcry_1_1_enemy_a71f1c9e699b53b96e8c304ae0138469a}\label{classcry_1_1_enemy_a71f1c9e699b53b96e8c304ae0138469a}} 
+\index{cry::Enemy@{cry::Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily cry\+::\+Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{std\+::string}]{title = {\ttfamily \char`\"{}light\char`\"{}},  }\item[{int}]{dam = {\ttfamily heatlight},  }\item[{int}]{HP = {\ttfamily HPlight},  }\item[{int}]{healka = {\ttfamily heallight},  }\item[{int}]{speadhealka = {\ttfamily secperHP} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \char`\"{}title\char`\"{}=} & name \\
+\hline
+{\em \char`\"{}dam\char`\"{}=dam} & \\
+\hline
+{\em \char`\"{}\+HP\char`\"{}=} & MAX HP \\
+\hline
+{\em \char`\"{}healka\char`\"{}=} & HEAL HP PER SPEED \\
+\hline
+{\em \char`\"{}speadhealka\char`\"{}=} & SEC PER HP \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcry_1_1_enemy_a38684fe0e1686b16567c32f88a0f1476}\label{classcry_1_1_enemy_a38684fe0e1686b16567c32f88a0f1476}} 
+\index{cry::Enemy@{cry::Enemy}!fight@{fight}}
+\index{fight@{fight}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{fight()}{fight()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::fight (\begin{DoxyParamCaption}\item[{int}]{damto }\end{DoxyParamCaption})}
+
+
+
+demag to emeny 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a868a8a1d164a5a350ba06cff606cbb8f}\label{classcry_1_1_enemy_a868a8a1d164a5a350ba06cff606cbb8f}} 
+\index{cry::Enemy@{cry::Enemy}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get damege hero 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_af02512cb4065aad9a91ed72d061fa2a9}\label{classcry_1_1_enemy_af02512cb4065aad9a91ed72d061fa2a9}} 
+\index{cry::Enemy@{cry::Enemy}!getHeal@{getHeal}}
+\index{getHeal@{getHeal}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{getHeal()}{getHeal()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::get\+Heal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get heal \mbox{[}ser per hp\mbox{]} 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a136d906af099bd88f0c77f13f1b9e493}\label{classcry_1_1_enemy_a136d906af099bd88f0c77f13f1b9e493}} 
+\index{cry::Enemy@{cry::Enemy}!getHP@{getHP}}
+\index{getHP@{getHP}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{getHP()}{getHP()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::get\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get now hphero 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_afdbdba924ae81d1dca384d5178d4a81c}\label{classcry_1_1_enemy_afdbdba924ae81d1dca384d5178d4a81c}} 
+\index{cry::Enemy@{cry::Enemy}!getSpeedH@{getSpeedH}}
+\index{getSpeedH@{getSpeedH}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{getSpeedH()}{getSpeedH()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::get\+SpeedH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get speed heal 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_abe5ce2f2c8a819af4b59d0706dbf0efa}\label{classcry_1_1_enemy_abe5ce2f2c8a819af4b59d0706dbf0efa}} 
+\index{cry::Enemy@{cry::Enemy}!getSpeedW@{getSpeedW}}
+\index{getSpeedW@{getSpeedW}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{getSpeedW()}{getSpeedW()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::get\+SpeedW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get speed walk 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_acf1119a9114a2218500ec1246813088f}\label{classcry_1_1_enemy_acf1119a9114a2218500ec1246813088f}} 
+\index{cry::Enemy@{cry::Enemy}!moving@{moving}}
+\index{moving@{moving}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{moving()}{moving()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$ int, int $>$ cry\+::\+Enemy\+::moving (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\+\_\+field}} \&}]{,  }\item[{std\+::pair$<$ int, int $>$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+for find min step 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name=\char`\"{}field\char`\"{}$<$/wheresters$>$} & \\
+\hline
+{\em name} & = \char`\"{}step\char`\"{}$<$/ourstep$>$ \\
+\hline
+{\em name} & = \char`\"{}xy\char`\"{}$<$/horizont$>$ \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classcry_1_1_enemylight_a5d16ba4f9d02a0f9d4e2ef1b7ebd421f}{cry\+::\+Enemylight}}, \mbox{\hyperlink{classcry_1_1_enemyheavy_a51ecdcca49ffffd444b2b18f7c67bafe}{cry\+::\+Enemyheavy}}, and \mbox{\hyperlink{classcry_1_1_enemyfly_ae8c1cc8202de49f4997ae187e724d2be}{cry\+::\+Enemyfly}}.
+
+\mbox{\Hypertarget{classcry_1_1_enemy_aa27c2044144030294c912c142809e213}\label{classcry_1_1_enemy_aa27c2044144030294c912c142809e213}} 
+\index{cry::Enemy@{cry::Enemy}!plushp@{plushp}}
+\index{plushp@{plushp}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{plushp()}{plushp()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::plushp (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{clock }\end{DoxyParamCaption})}
+
+
+
+heal 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a15f4aefd3a4af3246f9414ff437b63e6}\label{classcry_1_1_enemy_a15f4aefd3a4af3246f9414ff437b63e6}} 
+\index{cry::Enemy@{cry::Enemy}!setdamege@{setdamege}}
+\index{setdamege@{setdamege}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{setdamege()}{setdamege()}}
+{\footnotesize\ttfamily void cry\+::\+Enemy\+::setdamege (\begin{DoxyParamCaption}\item[{int}]{dam }\end{DoxyParamCaption})}
+
+
+
+change damage 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a3450fe20b3c861049fce57e2b9931656}\label{classcry_1_1_enemy_a3450fe20b3c861049fce57e2b9931656}} 
+\index{cry::Enemy@{cry::Enemy}!setHP@{setHP}}
+\index{setHP@{setHP}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{setHP()}{setHP()}}
+{\footnotesize\ttfamily int cry\+::\+Enemy\+::set\+HP (\begin{DoxyParamCaption}\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+new noww hp 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a0b221bff0a0db5315e4f6cf0c239f1dc}\label{classcry_1_1_enemy_a0b221bff0a0db5315e4f6cf0c239f1dc}} 
+\index{cry::Enemy@{cry::Enemy}!setMax@{setMax}}
+\index{setMax@{setMax}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{setMax()}{setMax()}}
+{\footnotesize\ttfamily void cry\+::\+Enemy\+::set\+Max (\begin{DoxyParamCaption}\item[{int}]{hp }\end{DoxyParamCaption})}
+
+
+
+set max 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_ae14279708c41a5f409ef7d5aea35b826}\label{classcry_1_1_enemy_ae14279708c41a5f409ef7d5aea35b826}} 
+\index{cry::Enemy@{cry::Enemy}!setSpeedh@{setSpeedh}}
+\index{setSpeedh@{setSpeedh}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{setSpeedh()}{setSpeedh()}}
+{\footnotesize\ttfamily void cry\+::\+Enemy\+::set\+Speedh (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+change speed heal 
+
+\mbox{\Hypertarget{classcry_1_1_enemy_a3920308944f404c7cb55ba73f220cf9b}\label{classcry_1_1_enemy_a3920308944f404c7cb55ba73f220cf9b}} 
+\index{cry::Enemy@{cry::Enemy}!setSpeedW@{setSpeedW}}
+\index{setSpeedW@{setSpeedW}!cry::Enemy@{cry::Enemy}}
+\doxysubsubsection{\texorpdfstring{setSpeedW()}{setSpeedW()}}
+{\footnotesize\ttfamily void cry\+::\+Enemy\+::set\+SpeedW (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+change speed heal 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hlizu/source/repos/\+Tower\+\_\+\+Def/\+Tower\+\_\+\+Def/Enemy.\+h\item 
+C\+:/\+Users/hlizu/source/repos/\+Tower\+\_\+\+Def/\+Tower\+\_\+\+Def/Enemy.\+cpp\end{DoxyCompactItemize}

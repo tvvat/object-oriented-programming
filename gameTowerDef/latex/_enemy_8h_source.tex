@@ -1,0 +1,138 @@
+\hypertarget{_enemy_8h_source}{}\doxysection{Enemy.\+h}
+\label{_enemy_8h_source}\index{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Enemy.h@{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Enemy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{4 \textcolor{comment}{//\#include "{}Build.h"{}}}
+\DoxyCodeLine{5 \textcolor{comment}{//\#include "{}Game.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define R0 3}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define blockpersec 1}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define heatlight 5}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define HPlight 1}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define heallight 30 }}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define secperHP 3}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define heatheavy 7}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define HPheavy 40}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define healheavy 1 }}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define heatfly 5}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define HPfly 20}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define healfly 1 }}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define secperHPfly 4}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }cry \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{class }Playng\_field;}
+\DoxyCodeLine{32     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_enemy}{Enemy}} \{}
+\DoxyCodeLine{33     \textcolor{keyword}{private}:}
+\DoxyCodeLine{34         std::string name;}
+\DoxyCodeLine{35         \textcolor{keywordtype}{int} damage;}
+\DoxyCodeLine{36         \textcolor{keywordtype}{int} speedwolk;}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} speedheal;}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} heal;}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} maxHP;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{int} nowHP;}
+\DoxyCodeLine{41     \textcolor{keyword}{public}:}
+\DoxyCodeLine{50         \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}}(std::string title = \textcolor{stringliteral}{"{}light"{}}, \textcolor{keywordtype}{int} dam = heatlight, \textcolor{keywordtype}{int} HP = HPlight, \textcolor{keywordtype}{int} healka = heallight, \textcolor{keywordtype}{int} speadhealka = secperHP);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{keywordtype}{int} getMaxHP() \{ \textcolor{keywordflow}{return} maxHP; \}}
+\DoxyCodeLine{57         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_a136d906af099bd88f0c77f13f1b9e493}{getHP}}() \{ \textcolor{keywordflow}{return} nowHP; \}}
+\DoxyCodeLine{62         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_a868a8a1d164a5a350ba06cff606cbb8f}{getDamage}}() \{ \textcolor{keywordflow}{return} damage; \}}
+\DoxyCodeLine{67         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_abe5ce2f2c8a819af4b59d0706dbf0efa}{getSpeedW}}() \{ \textcolor{keywordflow}{return} speedwolk; \}}
+\DoxyCodeLine{72         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_afdbdba924ae81d1dca384d5178d4a81c}{getSpeedH}}() \{ \textcolor{keywordflow}{return} speedheal; \}}
+\DoxyCodeLine{77         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_af02512cb4065aad9a91ed72d061fa2a9}{getHeal}}() \{ \textcolor{keywordflow}{return} heal; \}}
+\DoxyCodeLine{82         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_enemy_ae14279708c41a5f409ef7d5aea35b826}{setSpeedh}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_enemy_a3920308944f404c7cb55ba73f220cf9b}{setSpeedW}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{92         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_enemy_a15f4aefd3a4af3246f9414ff437b63e6}{setdamege}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{97         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_a3450fe20b3c861049fce57e2b9931656}{setHP}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{102         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_a38684fe0e1686b16567c32f88a0f1476}{fight}}(\textcolor{keywordtype}{int});    }
+\DoxyCodeLine{107         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_enemy_aa27c2044144030294c912c142809e213}{plushp}}(time\_t);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{113         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_enemy_a0b221bff0a0db5315e4f6cf0c239f1dc}{setMax}}(\textcolor{keywordtype}{int}); }
+\DoxyCodeLine{122         \textcolor{keyword}{virtual} std::pair<int, int> \mbox{\hyperlink{classcry_1_1_enemy_acf1119a9114a2218500ec1246813088f}{moving}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}\&, std::pair<int, int>, \textcolor{keywordtype}{int}) = 0;}
+\DoxyCodeLine{123         \mbox{\hyperlink{classcry_1_1_enemy}{\string~Enemy}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{124     \};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{keyword}{struct }\mbox{\hyperlink{structcry_1_1aura}{aura}} \{}
+\DoxyCodeLine{127         \textcolor{keywordtype}{int} radius = 0;}
+\DoxyCodeLine{128         \textcolor{keywordtype}{int} weakness;}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \};}
+\DoxyCodeLine{131     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}};}
+\DoxyCodeLine{132     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_enemylight}{Enemylight}} :\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}} \{}
+\DoxyCodeLine{133     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{134 \textcolor{comment}{        Enemy light;*/}}
+\DoxyCodeLine{135     \textcolor{keyword}{public}:}
+\DoxyCodeLine{136         \mbox{\hyperlink{classcry_1_1_enemylight}{Enemylight}}() \{\};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138         std::pair<int,int> \mbox{\hyperlink{classcry_1_1_enemylight_a5d16ba4f9d02a0f9d4e2ef1b7ebd421f}{moving}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}} \&, std::pair<int, int>,\textcolor{keywordtype}{int}  );}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_enemyheavy}{Enemyheavy}}:\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}} \{}
+\DoxyCodeLine{145     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{146 \textcolor{comment}{        Enemy heavy("{}heavy"{}, heatheavy, HPheavy,  healheavy, secperHP);*/}}
+\DoxyCodeLine{147     \textcolor{keyword}{public}:}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149         \mbox{\hyperlink{classcry_1_1_enemyheavy}{Enemyheavy}}() : \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}}(\textcolor{stringliteral}{"{}heavy"{}}, heatheavy, HPheavy, healheavy, secperHP) \{\};}
+\DoxyCodeLine{150         std::pair<int,int>\mbox{\hyperlink{classcry_1_1_enemyheavy_a51ecdcca49ffffd444b2b18f7c67bafe}{moving}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}} \&, std::pair<int, int>,\textcolor{keywordtype}{int}  );}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \};}
+\DoxyCodeLine{154     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_enemyfly}{Enemyfly}} :\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}} \{}
+\DoxyCodeLine{155     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{156 \textcolor{comment}{        Enemy fly;*/}}
+\DoxyCodeLine{157     \textcolor{keyword}{public}:}
+\DoxyCodeLine{158         \mbox{\hyperlink{classcry_1_1_enemyfly}{Enemyfly}}() : \mbox{\hyperlink{classcry_1_1_enemy}{Enemy}}(\textcolor{stringliteral}{"{}fly"{}}, heatfly, HPfly, healfly, secperHPfly) \{\};}
+\DoxyCodeLine{159         std::pair<int,int> \mbox{\hyperlink{classcry_1_1_enemyfly_ae8c1cc8202de49f4997ae187e724d2be}{moving}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}} \&, std::pair<int, int>,\textcolor{keywordtype}{int} );}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \}; }
+\DoxyCodeLine{164     }
+\DoxyCodeLine{165     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1super_enemylight}{superEnemylight}} :\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemylight}{Enemylight}} \{}
+\DoxyCodeLine{166     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{167 \textcolor{comment}{        Enemy light;*/}\textcolor{keywordtype}{int} force = 3;}
+\DoxyCodeLine{168     \textcolor{keyword}{public}:}
+\DoxyCodeLine{169         std::pair<int,int> findtower(std::pair<int,int>, \textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}\& );}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171     \};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1super_enemyheavy}{superEnemyheavy}} :\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemyheavy}{Enemyheavy}} \{}
+\DoxyCodeLine{175     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{176 \textcolor{comment}{        Enemy heavy("{}heavy"{}, heatheavy, HPheavy,  healheavy, secperHP);*/}\textcolor{keywordtype}{int} force = 3;}
+\DoxyCodeLine{177     \textcolor{keyword}{public}:}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179         \mbox{\hyperlink{classcry_1_1super_enemyheavy}{superEnemyheavy}}() \{\};}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181         std::pair<int, int> findtower(std::pair<int, int>, \textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}\&);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184     \};}
+\DoxyCodeLine{185     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1super_enemyfly}{superEnemyfly}} :\textcolor{keyword}{public} \mbox{\hyperlink{classcry_1_1_enemyfly}{Enemyfly}} \{}
+\DoxyCodeLine{186     \textcolor{keyword}{private}:\textcolor{comment}{/*}}
+\DoxyCodeLine{187 \textcolor{comment}{        Enemy fly;*/}\textcolor{keywordtype}{int} force = 3;}
+\DoxyCodeLine{188     \textcolor{keyword}{public}:}
+\DoxyCodeLine{189         \mbox{\hyperlink{classcry_1_1super_enemyfly}{superEnemyfly}}() \{\};}
+\DoxyCodeLine{190         std::pair<int, int> findtower(std::pair<int, int>, \textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}\&);}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \}}
+
+\end{DoxyCode}

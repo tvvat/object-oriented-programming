@@ -1,0 +1,131 @@
+\hypertarget{_build_8h_source}{}\doxysection{Build.\+h}
+\label{_build_8h_source}\index{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Build.h@{C:/Users/hlizu/source/repos/Tower\_Def/Tower\_Def/Build.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Enemy.h"{}}}
+\DoxyCodeLine{6 \textcolor{comment}{//\#include "{}Game.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define numberoflvl 5}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define countenemy 3}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define timetab 40}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define wave 6}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define timewave 50}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define Num 3}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define counttower 10}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define min5 300}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define tensecond 10}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define towerlvl 10}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define R0 2}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define wallcost 30}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define rep 5}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define HPwall 10}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }cry \{}
+\DoxyCodeLine{26     \textcolor{keyword}{struct }\mbox{\hyperlink{structcry_1_1hcarater}{hcarater}} \{}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} money;}
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} speedmoney;}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} maxendurance;}
+\DoxyCodeLine{30         \textcolor{keywordtype}{int} endurance;}
+\DoxyCodeLine{31         \textcolor{keywordtype}{int} heal;}
+\DoxyCodeLine{32         \textcolor{keywordtype}{int} cost;}
+\DoxyCodeLine{33         \textcolor{keywordtype}{int} speedheal = tensecond;}
+\DoxyCodeLine{34     \};}
+\DoxyCodeLine{35     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_palace}{Palace}} \{}
+\DoxyCodeLine{36     \textcolor{keyword}{private}:}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         std::vector<hcarater> table;}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} nowlvl;}
+\DoxyCodeLine{40     \textcolor{keyword}{public}:}
+\DoxyCodeLine{45         \mbox{\hyperlink{classcry_1_1_palace_a14717d512d6085907dde064e8b93df6a}{Palace}}();}
+\DoxyCodeLine{50         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcry_1_1_palace_a7ac55ccc45d6e56675c065de251d2eb9}{lvlup}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{57         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_palace_af080c89ca315e56dfe0f16bd4c1e0ce1}{gameover}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_palace_aec378a6f3902283ef7fdc1081bddeb5b}{getmoney}}();}
+\DoxyCodeLine{68         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_palace_afb08f7d7e256ab14cab0f939be4e5fdb}{setdem}}(\textcolor{keywordtype}{int} t) \{ \textcolor{keywordflow}{if} (t < 0) \textcolor{keywordflow}{return}; table[nowlvl].endurance -\/= t; \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{74         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_palace_aa24c391d1bec462d7dfd17a82fa5beca}{earnmoney}}(time\_t);}
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_palace_ad984997608db7bcb673b123425f4c5a9}{treatment}}(time\_t);}
+\DoxyCodeLine{80     \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keyword}{enum} Typetower \{}
+\DoxyCodeLine{83         fire = 0,}
+\DoxyCodeLine{84         Strela,}
+\DoxyCodeLine{85         pushka,}
+\DoxyCodeLine{86     \};}
+\DoxyCodeLine{87     \textcolor{keyword}{struct }\mbox{\hyperlink{structcry_1_1_tablelvl}{Tablelvl}} \{}
+\DoxyCodeLine{88         \textcolor{keywordtype}{int} radius;}
+\DoxyCodeLine{89         \textcolor{keywordtype}{int} damage;}
+\DoxyCodeLine{90         \textcolor{keywordtype}{int} speed;}
+\DoxyCodeLine{91         \textcolor{keywordtype}{int} cost;}
+\DoxyCodeLine{92     \};}
+\DoxyCodeLine{93     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_tower}{Tower}} \{}
+\DoxyCodeLine{94     \textcolor{keyword}{private}:}
+\DoxyCodeLine{95         Typetower type;}
+\DoxyCodeLine{96         std::vector<Tablelvl> lvl;}
+\DoxyCodeLine{97         \textcolor{keywordtype}{int} nowlvl;}
+\DoxyCodeLine{98     \textcolor{keyword}{public}:}
+\DoxyCodeLine{103         \mbox{\hyperlink{classcry_1_1_tower}{Tower}}(Typetower t = Strela);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109         Typetower \mbox{\hyperlink{classcry_1_1_tower_a47a683d86e629d565185b994a2fa7c11}{getType}}() \{ \textcolor{keywordflow}{return} type; \}}
+\DoxyCodeLine{114         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcry_1_1_tower_a3f39b7601e0017d96b4d1a727a4c548d}{lvlup}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{119         std::pair<int, int> \mbox{\hyperlink{classcry_1_1_tower_a5f740416a0d1a0ba510b241c6c9c0f1b}{calculatedistenemy}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcry_1_1_playng__field}{Playng\_field}}\&, std::pair <int, int>);}
+\DoxyCodeLine{124         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_tower_aa9fadddcebc8fb61f1bbd9e936b24bc1}{setdamage}}(\textcolor{keywordtype}{int} t) \{ \textcolor{keywordflow}{if} (t <= 0) \textcolor{keywordflow}{return} 0; \textcolor{keywordflow}{return} lvl[nowlvl].damage; \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{131         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_tower_a2d6a4a23302cf415503895172c56fa5d}{getcost}}() \{ \textcolor{keywordflow}{return} lvl[nowlvl].cost; \}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \};}
+\DoxyCodeLine{135     \textcolor{keyword}{enum}  typeenemy \{}
+\DoxyCodeLine{136         light,}
+\DoxyCodeLine{137         heavy,}
+\DoxyCodeLine{138         fly,}
+\DoxyCodeLine{139         all,}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \};}
+\DoxyCodeLine{142     \textcolor{keyword}{struct }\mbox{\hyperlink{structcry_1_1allenemy}{allenemy}} \{}
+\DoxyCodeLine{143         \textcolor{keywordtype}{int} numberenemies[all];}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \};}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_lair}{Lair}} \{}
+\DoxyCodeLine{148     \textcolor{keyword}{private}:}
+\DoxyCodeLine{149         std::map <time\_t,allenemy > enemytime;}
+\DoxyCodeLine{150         \textcolor{comment}{/*time\_t  time[countenemy];*/}}
+\DoxyCodeLine{151     \textcolor{keyword}{public}:}
+\DoxyCodeLine{156         \mbox{\hyperlink{classcry_1_1_lair_a14426b1acf03b7695cd12b2b0a00995d}{Lair}}();}
+\DoxyCodeLine{161         \mbox{\hyperlink{structcry_1_1allenemy}{allenemy}}\& \mbox{\hyperlink{classcry_1_1_lair_a42f3ff94c0ace2807efd81eea1fbe8df}{creatEnemytime}}(time\_t);}
+\DoxyCodeLine{166         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_lair_aff773ca14e8a32f1bbf9f2e2581cdd9b}{creatEnemy}}();}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{keyword}{class }\mbox{\hyperlink{classcry_1_1_wall}{Wall}} \{}
+\DoxyCodeLine{173     \textcolor{keyword}{private}:}
+\DoxyCodeLine{174         \textcolor{keywordtype}{int} maxHP;}
+\DoxyCodeLine{175         \textcolor{keywordtype}{int} nowHP;}
+\DoxyCodeLine{176         \textcolor{keywordtype}{int} repair;}
+\DoxyCodeLine{177         \textcolor{keywordtype}{int} cost;}
+\DoxyCodeLine{178     \textcolor{keyword}{public}:}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{184         \mbox{\hyperlink{classcry_1_1_wall_aedd316a234df4cb0adbcfa9b5c57011e}{Wall}}();}
+\DoxyCodeLine{190         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_wall_a0911675bdb2526c02a3333e948c94892}{damage}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{196         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_wall_a3fcc6a73d7fe06d5447207f2fb1fb70d}{heal}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{201         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_wall_a619feda7d70d940bef204f0fae8cca0b}{getMax}}() \{ \textcolor{keywordflow}{return} maxHP; \};}
+\DoxyCodeLine{206         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_wall_a95845f80bad419765a422bd3806149bb}{getNow}}() \{ \textcolor{keywordflow}{return} nowHP; \};}
+\DoxyCodeLine{211         \textcolor{keywordtype}{int} \mbox{\hyperlink{classcry_1_1_wall_a87f39c88c9eb21c91ed7ef3cfd88fad1}{getcost}}() \{ \textcolor{keywordflow}{return} cost; \};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{217         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcry_1_1_wall_a4a80234d97abae3bee0f8e26d36164f6}{setMax}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{218     \};}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 \}      \textcolor{comment}{// Исключите редко используемые компоненты из заголовков Windows}}
+
+\end{DoxyCode}
