@@ -1,0 +1,5 @@
+﻿  Game.cpp
+C:\Users\hlizu\source\repos\Tower_Def\Tower_Def\Build.h(20,1): warning C4005: R0: изменение макроопределения
+C:\Users\hlizu\source\repos\Tower_Def\Tower_Def\Enemy.h(9): message : см. предыдущее определение "R0"
+C:\Users\hlizu\source\repos\Tower_Def\Tower_Def\Game.cpp(65,23): warning C4018: <: несоответствие типов со знаком и без знака
+  Tower_Def.vcxproj -> C:\Users\hlizu\source\repos\Tower_Def\Debug\Tower_Def.lib
